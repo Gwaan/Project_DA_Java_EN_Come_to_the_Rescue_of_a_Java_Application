@@ -1,6 +1,5 @@
 package com.hemebiotech.analytics;
 
-
 import java.io.FileWriter;
 
 public class AnalyticsCounter {
@@ -10,24 +9,13 @@ public class AnalyticsCounter {
 
 	public static void main(String args[]) throws Exception {
 		// first get input
-		ISymptomReader sR = new ReadSymptomDataFromFile("symptoms.txt");
-		
+		ISortedSymptoms sS = new SymptomsSorter();
 
-		/*
-		 * int i = 0; // set i to 0 int headCount = 0; // counts headaches while (line
-		 * != null) { i++; // increment i System.out.println("symptom from file: " +
-		 * line); if (line.equals("headache")) { headCount++;
-		 * System.out.println("number of headaches: " + headCount); } else if
-		 * (line.equals("rush")) { rashCount++; } else if (line.contains("pupils")) {
-		 * pupilCount++; }
-		 * 
-		 * line = reader.readLine(); // get another symptom }
-		 */
+		// displaying symptoms
+		sS.displaySymptoms();
 
-		// next generate output
-		for (String s : sR.getSymptoms()) {
-			System.out.println(s);
-		}
+		// output
+
 		FileWriter writer = new FileWriter("result.out");
 		writer.write("headache: " + headacheCount + "\n");
 		writer.write("rash: " + rashCount + "\n");
