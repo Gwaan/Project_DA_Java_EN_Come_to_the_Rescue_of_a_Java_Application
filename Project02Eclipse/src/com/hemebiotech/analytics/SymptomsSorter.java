@@ -3,7 +3,6 @@ package com.hemebiotech.analytics;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-import java.util.Map.Entry;
 
 public class SymptomsSorter implements ISortedSymptoms {
 
@@ -24,13 +23,19 @@ public class SymptomsSorter implements ISortedSymptoms {
 	}
 
 	@Override
-	public void displaySymptoms() {
-		for (Entry<String, Integer> entry : sortSymptoms().entrySet()) {
-			String key = entry.getKey();
-			Integer value = entry.getValue();
+	public Map<String, Integer> sortSymptoms(List<String> l) {
+		Map<String, Integer> sortedList = new TreeMap<>();
+		List<String> tmp = l;
 
-			System.out.println(key + ": " + value);
+		for (String s : tmp) {
+			if (!sortedList.containsKey(s)) {
+				sortedList.put(s, 1);
+			} else {
+				sortedList.put(s, sortedList.get(s) + 1);
+			}
 		}
+		return sortedList;
+
 	}
 
 }
