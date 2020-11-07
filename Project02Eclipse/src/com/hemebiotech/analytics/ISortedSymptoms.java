@@ -6,6 +6,4 @@ public interface ISortedSymptoms {
 
 	Map<String, Integer> sortSymptoms();
 
-	void displaySymptoms();
-
 }
