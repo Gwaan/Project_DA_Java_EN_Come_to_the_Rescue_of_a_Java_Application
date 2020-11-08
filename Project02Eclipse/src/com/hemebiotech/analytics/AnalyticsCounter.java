@@ -2,9 +2,24 @@ package com.hemebiotech.analytics;
 
 import java.util.Map;
 
-public class AnalyticsCounter {
+/**
+ * Programme lisant une source (fichier) de symptômes, comptant chaque
+ * occurence, les triant par ordre alphabétique puis les enregistrant dans un
+ * fichier cible
+ * 
+ * @author Gwen
+ * @version 1.0
+ */
 
-	public static void main(String args[]) throws Exception {
+public class AnalyticsCounter {
+	
+	/**
+	 * Main du programme
+	 * 
+	 * @param args
+	 */
+
+	public static void main(String args[]) {
 
 		// get input
 		ISymptomReader sR = new ReadSymptomDataFromFile("symptoms.txt");
