@@ -3,9 +3,9 @@ package com.hemebiotech.analytics;
 import java.util.Map;
 
 /**
- * Programme lisant une source (fichier) de symptômes, comptant chaque
+ * <p>Programme lisant une source (fichier) de symptômes, comptant chaque
  * occurence, les triant par ordre alphabétique puis les enregistrant dans un
- * fichier cible
+ * fichier cible</p>
  * 
  * @author Gwen
  * @version 1.0
