@@ -7,11 +7,6 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Map.Entry;
 
-/**
- * Classe enregistrant une Map dans un fichier cible
- *
- */
-
 public class WriteSymptomsToFile implements ISymptomWriter {
 	private String filePath;
 
@@ -24,12 +19,6 @@ public class WriteSymptomsToFile implements ISymptomWriter {
 		this.filePath = filePath;
 	}
 
-	/**
-	 * Méthode prenant en paramètre un objet de type Map 
-	 * et l'écrivant dans result.out
-	 * 
-	 * @param m objet de type Map à écrire dans le fichier cible
-	 */
 	@Override
 	public void writeSymptoms(Map<String, Integer> m) {
 		BufferedWriter fW = null;
