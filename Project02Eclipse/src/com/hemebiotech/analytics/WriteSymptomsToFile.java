@@ -10,6 +10,11 @@ import java.util.Map.Entry;
 public class WriteSymptomsToFile implements ISymptomWriter {
 	private String filePath;
 
+	/**
+	 * 
+	 * @param filePath chemin du fichier cible
+	 * 
+	 */
 	public WriteSymptomsToFile(String filePath) {
 		this.filePath = filePath;
 	}
@@ -18,7 +23,6 @@ public class WriteSymptomsToFile implements ISymptomWriter {
 	public void writeSymptoms(Map<String, Integer> m) {
 		BufferedWriter fW = null;
 		try {
-			ISortedSymptoms sS = new SymptomsSorter();
 			File f = new File(filePath);
 			fW = new BufferedWriter(new FileWriter(f));
 			for (Entry<String, Integer> entry : m.entrySet()) {
