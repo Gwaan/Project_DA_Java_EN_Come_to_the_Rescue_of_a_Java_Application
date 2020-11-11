@@ -7,7 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Simple brute force implementation
+ * Classe lisant les données d'un fichier texte
+ * 
+ * @author Gwen
+ * @version 1.0
  *
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
