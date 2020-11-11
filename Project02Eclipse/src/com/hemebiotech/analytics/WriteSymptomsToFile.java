@@ -7,6 +7,16 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Map.Entry;
 
+/**
+ * <p>
+ * Classe utilitaire permettant d'écrire un objet de type Map dans un fichier
+ * cible
+ * </p>
+ * 
+ * @author Gwen
+ * @version 1.0
+ */
+
 public class WriteSymptomsToFile implements ISymptomWriter {
 	private String filePath;
 
