@@ -4,29 +4,42 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Map;
 import java.util.Map.Entry;
 
 public class WriteSymptomsToFile implements ISymptomWriter {
+	private String filePath;
 
-	private BufferedWriter fW;
+	/**
+	 * 
+	 * @param filePath chemin du fichier cible
+	 * 
+	 */
+	public WriteSymptomsToFile(String filePath) {
+		this.filePath = filePath;
+	}
 
 	@Override
-	public void writeSymptoms(String fileName) {
+	public void writeSymptoms(Map<String, Integer> m) {
+		BufferedWriter fW = null;
 		try {
-			ISortedSymptoms sS = new SymptomsSorter();
-			File f = new File(fileName);
+			File f = new File(filePath);
 			fW = new BufferedWriter(new FileWriter(f));
-
-			for (Entry<String, Integer> entry : sS.sortSymptoms().entrySet()) {
+			for (Entry<String, Integer> entry : m.entrySet()) {
 				System.out.println(entry.getKey() + ": " + entry.getValue());
 				fW.write(entry.getKey() + ": " + entry.getValue());
 				fW.newLine();
 				fW.flush();
 			}
-			fW.close();
 			System.out.println("Done !");
 		} catch (IOException e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				fW.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 
 	}
