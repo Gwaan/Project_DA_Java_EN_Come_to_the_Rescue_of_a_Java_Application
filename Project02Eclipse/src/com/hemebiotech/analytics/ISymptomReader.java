@@ -11,6 +11,9 @@ import java.util.List;
  * The implementation does not need to order the list
  * </p>
  * 
+ * @author Gwen
+ * @version 1.0
+ * 
  */
 public interface ISymptomReader {
 	/**

@@ -7,6 +7,9 @@ import java.util.Map;
  * <p>
  * Interface permettant de trier un objet par paire clé, valeur
  * </p>
+ * 
+ * @author Gwen
+ * @version 1.0
  *
  */
 
