@@ -4,6 +4,9 @@ import java.util.Map;
 
 /**
  * Interface permettant d'écrire un objet de type Map dans un fichier cible
+ * 
+ * @author Gwen
+ * @version 1.0
  *
  */
 

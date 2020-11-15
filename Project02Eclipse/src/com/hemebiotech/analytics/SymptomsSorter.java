@@ -4,6 +4,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * <p>
+ * Classe utilitaire permettant de trier une List et la transformer en un objet
+ * de type TreeMap
+ * </p>
+ * 
+ * @author Gwen
+ * @version 1.0
+ */
+
 public class SymptomsSorter implements ISortedSymptoms {
 
 	@Override
